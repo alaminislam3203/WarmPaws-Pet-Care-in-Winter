@@ -1,6 +1,7 @@
 # WarmPaws - Pet Care in Winter
 
-[Live Demo](#https://warmpaws-pet-care-in-win-a8d38.web.app/)
+> 🔗 Live Demo:
+> [https://warmpaws-pet-care-in-win-a8d38.web.app/](https://warmpaws-pet-care-in-win-a8d38.web.app/)
 
 ## Project Overview
 
