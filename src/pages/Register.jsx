@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
@@ -130,9 +130,6 @@ const Register = () => {
           </fieldset>
         </form>
       </div>
-
-      {/*  React Hot Toast Container */}
-      <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
 };

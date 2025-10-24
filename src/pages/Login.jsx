@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const Login = () => {
   const [emailInput, setEmailInput] = useState('');
@@ -21,10 +21,10 @@ const Login = () => {
 
     signIn(email, password)
       .then(() => {
-        toast.success('Login successful!');
-        setTimeout(() => {
-          navigate(from, { replace: true });
-        }, 1500);
+        const id = toast.success('Login successful!');
+        setTimeout(() => toast.dismiss(id), 4000);
+
+        navigate(from);
       })
       .catch(err => {
         toast.error(`❌ ${err.code || 'Login failed. Please try again.'}`);
@@ -35,9 +35,7 @@ const Login = () => {
     googleSignIn()
       .then(() => {
         toast.success(' Logged in with Google!');
-        setTimeout(() => {
-          navigate(from, { replace: true });
-        }, 1500);
+        navigate(from);
       })
       .catch(err => {
         toast.error(`❌ ${err.code || 'Google login failed. Try again.'}`);
@@ -120,9 +118,6 @@ const Login = () => {
           </p>
         </form>
       </div>
-
-      {/* Toast Container */}
-      <Toaster position="top-center" />
     </div>
   );
 };

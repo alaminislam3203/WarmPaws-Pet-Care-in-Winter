@@ -1,9 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import userIcon from '../assets/user.png';
+import toast from 'react-hot-toast';
 
 const Profile = () => {
   const { user, updateUser } = useContext(AuthContext);
@@ -114,16 +114,6 @@ const Profile = () => {
           </form>
         )}
       </div>
-
-      <ToastContainer
-        position="top-center"
-        autoClose={3000}
-        hideProgressBar={false}
-        closeOnClick
-        pauseOnHover
-        draggable
-        theme="colored"
-      />
     </div>
   );
 };

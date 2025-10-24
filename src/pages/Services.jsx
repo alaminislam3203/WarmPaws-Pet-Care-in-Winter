@@ -1,11 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Services = () => {
   const [services, setServices] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      offset: 120,
+      easing: 'ease-in-out',
+      once: false,
+    });
+
+    // Fetch service data
     fetch('/services.json')
       .then(res => res.json())
       .then(data => setServices(data))
@@ -23,15 +34,17 @@ const Services = () => {
       </h1>
 
       <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3 px-6">
-        {services.map(service => (
+        {services.map((service, index) => (
           <div
             key={service.serviceId}
-            className="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col"
+            data-aos={index % 2 === 0 ? 'zoom-in' : 'fade-up'}
+            data-aos-delay={`${index * 100}`}
+            className="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col transform transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer"
           >
             <img
               src={service.image}
               alt={service.serviceName}
-              className="w-full h-60 object-cover"
+              className="w-full h-60 object-cover transition-transform duration-500 hover:scale-110"
             />
 
             <div className="p-5 flex flex-col flex-grow">

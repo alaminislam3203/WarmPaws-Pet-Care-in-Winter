@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const WinterCareTips = () => {
   const [tips, setTips] = useState([]);
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
+    // Initialize AOS animations
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      easing: 'ease-in-out',
+      once: true,
+    });
+
+    // Load data
     fetch('/winterCareTips.json')
       .then(res => res.json())
       .then(data => {
@@ -21,10 +32,16 @@ const WinterCareTips = () => {
     <section className="bg-[#F9FAFB] py-14">
       <div className="max-w-7xl mx-auto px-6">
         {/* Title */}
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-10">
+        <h2
+          className="text-4xl font-bold text-center text-gray-800 mb-10"
+          data-aos="fade-down"
+        >
           Winter Care Tips for Pets
         </h2>
-        <p className="text-center text-gray-600 mb-14 max-w-2xl mx-auto">
+        <p
+          className="text-center text-gray-600 mb-14 max-w-2xl mx-auto"
+          data-aos="fade-up"
+        >
           Help your furry friends stay warm, healthy, and happy during the
           chilly winter months with these expert-approved tips.
         </p>
@@ -34,13 +51,20 @@ const WinterCareTips = () => {
           {displayedTips.map((tip, index) => (
             <div
               key={tip.id}
+              data-aos={
+                index % 3 === 0
+                  ? 'fade-right'
+                  : index % 3 === 1
+                  ? 'zoom-in-up'
+                  : 'fade-left'
+              }
               className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col md:flex-row w-10/12"
             >
               {/* Image Left Side */}
               <img
                 src={tip.image}
                 alt={tip.question}
-                className="w-full md:w-1/3 h-64 object-cover"
+                className="w-full md:w-1/3 h-64 object-cover transform hover:scale-105 transition duration-500"
               />
 
               {/* Content Right Side */}
@@ -61,10 +85,10 @@ const WinterCareTips = () => {
 
         {/* All Tips Button */}
         {!showAll && tips.length > 6 && (
-          <div className="flex justify-center mt-10">
+          <div className="flex justify-center mt-10" data-aos="zoom-in">
             <button
               onClick={() => setShowAll(true)}
-              className="px-14 py-3 bg-[#FF6B6B] text-white rounded-full font-semibold hover:bg-[#ff5252] transition"
+              className="px-14 py-3 bg-[#FF6B6B] text-white rounded-full font-semibold hover:bg-[#ff5252] transition transform hover:scale-105"
             >
               More Tips
             </button>

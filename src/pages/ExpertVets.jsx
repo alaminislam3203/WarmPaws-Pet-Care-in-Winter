@@ -65,7 +65,7 @@ const ExpertVets = () => {
           className="text-2xl sm:text-4xl font-bold text-center text-gray-800 mb-6 sm:mb-10"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8 }}
         >
           Meet Our Expert Vets
@@ -75,7 +75,7 @@ const ExpertVets = () => {
           className="text-center text-gray-600 mb-8 sm:mb-14 text-sm sm:text-base max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           Our highly skilled veterinarians provide the best care for your pets.
@@ -91,7 +91,7 @@ const ExpertVets = () => {
                 className="relative w-full rounded-xl sm:rounded-2xl overflow-hidden hover:shadow-2xl transition duration-300"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
                 {/* Background Image */}
@@ -105,7 +105,7 @@ const ExpertVets = () => {
                   <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.8 }}
                   >
                     <h3 className="text-3xl sm:text-7xl font-bold mb-2 sm:mb-4">
@@ -123,7 +123,7 @@ const ExpertVets = () => {
                           key={i}
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
+                          viewport={{ once: false }}
                           transition={{ duration: 0.6, delay: i * 0.1 }}
                         >
                           {i + 1}. {sentence.trim()}.
@@ -137,7 +137,7 @@ const ExpertVets = () => {
                     className="mt-4 sm:mt-8"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.8 }}
                   >
                     <div className="space-y-2 sm:space-y-3 text-xs sm:text-base mb-4 sm:mb-6">
@@ -145,7 +145,7 @@ const ExpertVets = () => {
                         className="flex items-center gap-2 sm:gap-3"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         transition={{ duration: 0.6 }}
                       >
                         <FaGraduationCap className="text-[#FFD700] text-sm sm:text-xl" />
@@ -158,7 +158,7 @@ const ExpertVets = () => {
                         className="flex items-center gap-2 sm:gap-3"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         transition={{ duration: 0.6, delay: 0.1 }}
                       >
                         <FaUniversity className="text-[#FFD700] text-sm sm:text-xl" />
@@ -171,7 +171,7 @@ const ExpertVets = () => {
                         className="flex items-center gap-2 sm:gap-3"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                       >
                         <FaMapMarkerAlt className="text-[#FFD700] text-sm sm:text-xl" />
@@ -186,7 +186,7 @@ const ExpertVets = () => {
                       className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-2 sm:mb-4 text-xs sm:text-base"
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: false }}
                       transition={{ duration: 0.6 }}
                     >
                       <p className="font-semibold mb-1 sm:mb-0">
@@ -195,7 +195,7 @@ const ExpertVets = () => {
                       <div className="flex">{renderStars(doctor.rating)}</div>
                     </motion.div>
 
-                    {/* Buttons remain unchanged */}
+                    {/* Buttons */}
                     <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                       <a
                         href={`mailto:${doctor.email}`}
