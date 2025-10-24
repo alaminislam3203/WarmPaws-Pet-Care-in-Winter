@@ -90,10 +90,12 @@ const Navbar = () => {
         <div className="flex items-center gap-3 relative">
           <div className="relative group">
             <img
-              className="w-9 h-9 rounded-full cursor-pointer border border-gray-300"
-              src={user ? user.photoURL : userIcon}
+              className="w-9 h-9 rounded-full cursor-pointer border border-gray-300 object-cover"
+              src={user?.photoURL || userIcon}
               alt="User Avatar"
+              onError={e => (e.target.src = userIcon)}
             />
+
             {user && (
               <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-48 bg-white text-gray-700 text-sm rounded-lg shadow-md p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
                 <p className="font-semibold text-center">
