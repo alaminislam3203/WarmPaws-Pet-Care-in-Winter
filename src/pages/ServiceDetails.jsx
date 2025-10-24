@@ -1,8 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ServiceDetails = () => {
   const { user } = useContext(AuthContext);
@@ -35,11 +34,7 @@ const ServiceDetails = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    toast.success('Service booked successfully! ', {
-      position: 'top-center',
-      autoClose: 2000,
-      theme: 'colored',
-    });
+    toast.success(' Service booked successfully!');
     setFormData({ name: '', email: '' });
   };
 
@@ -51,8 +46,8 @@ const ServiceDetails = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-10 px-4">
-      {/* Toast container positioned at top-center */}
-      <ToastContainer position="top-center" theme="colored" />
+      {/* Toast at top-center */}
+      <Toaster position="top-center" />
 
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6">
         <h1 className="text-3xl font-bold mb-4">{service.serviceName}</h1>

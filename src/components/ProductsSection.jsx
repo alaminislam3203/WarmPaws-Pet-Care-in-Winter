@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ProductsSection = () => {
   const [products, setProducts] = useState([]);
@@ -13,21 +12,15 @@ const ProductsSection = () => {
   }, []);
 
   const handleBuyNow = productName => {
-    toast.success(`${productName} added to cart!`, {
-      position: 'top-center',
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      theme: 'colored',
-    });
+    toast.success(`🛒 ${productName} added to cart!`);
   };
 
   return (
     <section className="w-full bg-gray-50 py-12">
       <div className="w-11/12 mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">Our Products</h2>
+
+        {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {products.map(product => (
             <div
@@ -56,8 +49,9 @@ const ProductsSection = () => {
           ))}
         </div>
       </div>
-      {/* Toast Container */}
-      <ToastContainer />
+
+      {/* Hot Toast Container */}
+      <Toaster position="top-center" />
     </section>
   );
 };

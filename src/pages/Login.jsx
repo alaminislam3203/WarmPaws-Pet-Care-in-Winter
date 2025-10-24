@@ -2,9 +2,8 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
-import { toast, ToastContainer } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import 'react-toastify/dist/ReactToastify.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
   const [emailInput, setEmailInput] = useState('');
@@ -22,52 +21,36 @@ const Login = () => {
 
     signIn(email, password)
       .then(() => {
-        toast.success('Login successful! ', {
-          position: 'top-center',
-          autoClose: 1500,
-          theme: 'colored',
-        });
-
+        toast.success('Login successful!');
         setTimeout(() => {
           navigate(from, { replace: true });
-        }, 1600);
+        }, 1500);
       })
       .catch(err => {
-        toast.error(err.code || 'Login failed. Please try again.', {
-          position: 'top-center',
-          autoClose: 2000,
-          theme: 'colored',
-        });
+        toast.error(`❌ ${err.code || 'Login failed. Please try again.'}`);
       });
   };
 
   const handleGoogleLogin = () => {
     googleSignIn()
       .then(() => {
-        toast.success('Logged in with Google! ', {
-          position: 'top-center',
-          autoClose: 1500,
-          theme: 'colored',
-        });
+        toast.success(' Logged in with Google!');
         setTimeout(() => {
           navigate(from, { replace: true });
-        }, 1600);
+        }, 1500);
       })
       .catch(err => {
-        toast.error(err.code || 'Google login failed. Try again.', {
-          position: 'top-center',
-          autoClose: 2000,
-          theme: 'colored',
-        });
+        toast.error(`❌ ${err.code || 'Google login failed. Try again.'}`);
       });
   };
 
   return (
-    <div className="flex justify-center min-h-screen items-center bg-gray-50">
+    <div className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-gray-50">
       <div className="card bg-base-100 w-full max-w-sm shadow-2xl py-5">
         <h2 className="font-semibold text-2xl text-center mb-4">
           Login to your account
         </h2>
+
         <form onSubmit={handleLogin} className="card-body">
           {/* Email Field */}
           <label className="label">Email</label>
@@ -139,7 +122,7 @@ const Login = () => {
       </div>
 
       {/* Toast Container */}
-      <ToastContainer position="top-center" theme="colored" />
+      <Toaster position="top-center" />
     </div>
   );
 };

@@ -7,7 +7,7 @@ const AuthLayout = () => {
   return (
     <div className="flex flex-col min-h-screen bg-base-200">
       {/* Navbar */}
-      <header className="w-full py-4">
+      <header className="w-full pb-4">
         <Navbar />
       </header>
 

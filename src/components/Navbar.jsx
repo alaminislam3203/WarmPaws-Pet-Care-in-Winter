@@ -4,6 +4,7 @@ import { AuthContext } from '../provider/AuthProvider';
 import userIcon from '../assets/user.png';
 import LogoIcon from '../assets/LogoIcon.png';
 import { HiMenu, HiX } from 'react-icons/hi';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -11,8 +12,8 @@ const Navbar = () => {
 
   const handleLogOut = () => {
     logOut()
-      .then(() => alert('You Logged Out successfully'))
-      .catch(error => console.log(error));
+      .then(() => toast.success(' You Logged Out Successfully!'))
+      .catch(() => toast.error('❌ Logout failed! Please try again.'));
   };
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -32,6 +33,7 @@ const Navbar = () => {
       >
         Home
       </NavLink>
+
       <NavLink
         to="/services"
         className={({ isActive }) =>
@@ -45,6 +47,7 @@ const Navbar = () => {
       >
         Services
       </NavLink>
+
       <NavLink
         to="/profile"
         className={({ isActive }) =>
@@ -67,7 +70,7 @@ const Navbar = () => {
       style={{ backgroundColor: '#045494' }}
     >
       <div className="flex justify-between items-center">
-        {/* Logo */}
+        {/* Logo Section */}
         <div className="flex items-center gap-3">
           <img
             src={LogoIcon}
@@ -84,6 +87,7 @@ const Navbar = () => {
           </div>
         </div>
 
+        {/* Navigation Links (Desktop) */}
         <div className="hidden md:flex gap-4">{navLinks}</div>
 
         {/* User Info */}
@@ -108,6 +112,7 @@ const Navbar = () => {
             )}
           </div>
 
+          {/* Auth Buttons */}
           {user ? (
             <button
               onClick={handleLogOut}
@@ -124,6 +129,7 @@ const Navbar = () => {
             </Link>
           )}
 
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-2xl text-white"
             onClick={toggleMenu}
@@ -133,6 +139,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
         <div
           className="absolute top-full left-0 w-full shadow-md flex flex-col items-center py-4 gap-4 md:hidden z-50"
@@ -150,6 +157,9 @@ const Navbar = () => {
           )}
         </div>
       )}
+
+      {/* Toast Container */}
+      <Toaster position="top-center" />
     </nav>
   );
 };
