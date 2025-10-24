@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.postimg.cc/pr9QvM2Q/Winter-Coat-Fitting-for-Dogs.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    "image": "https://i.postimg.cc/brG0Pfzk/Winter-Grooming-amp-Paw.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Heated Pet Bed Setup",
+    "providerName": "WarmPaws Solutions",
+    "providerEmail": "contact@warmpaws.com",
+    "price": 40,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Professional installation of heated bedding keeps your pets warm, cozy, and comfortable during winter nights.",
+    "image": "https://i.postimg.cc/Zn9PmzT6/Heated-Pet.png",
+    "category": "Accessories"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Winter Health Checkup",
+    "providerName": "HealthyPaws Clinic",
+    "providerEmail": "clinic@healthypaws.com",
+    "price": 50,
+    "rating": 4.9,
+    "slotsAvailable": 2,
+    "description": "Comprehensive winter health checkup including vaccination and cold-weather wellness tips.",
+    "image": "https://i.postimg.cc/J0y38C1g/Winter-Health-Checkup.png",
+    "category": "Health"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Cozy Indoor Play Area Access",
+    "providerName": "PetFun Center",
+    "providerEmail": "info@petfun.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 10,
+    "description": "Safe and heated indoor play area for pets to stay active and entertained during cold weather.",
+    "image": "https://i.postimg.cc/KjdPvpzq/Cozy-Indoor-Play-Area-Access.png",
+    "category": "Entertainment"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Winter Paw Wax & Protection",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 15,
+    "rating": 4.8,
+    "slotsAvailable": 6,
+    "description": "Protective paw wax helps prevent cracking, dryness, and irritation caused by cold and icy winter surfaces.",
+    "image": "https://i.postimg.cc/d37RFcqn/Winter-Paw-Wax-amp-Protection.png",
+    "category": "Grooming"
+  }
+]

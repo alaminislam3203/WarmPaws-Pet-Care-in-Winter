@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "product_name": "Whiskas Pouch Cat Food Mackerel and Salmon (80g)",
+    "price": "$3.50",
+    "description": "Delicious wet food for cats made with real mackerel and salmon, providing essential nutrients and promoting healthy growth and strong muscles.",
+    "image": "https://i.postimg.cc/X7vdfZpS/1.jpg"
+  },
+  {
+    "id": 2,
+    "product_name": "Smartheart Kitten Pouch Tuna 85g",
+    "price": "$0.90",
+    "description": "Nutritious tuna-flavored wet food for kittens, supporting healthy development, strong bones, shiny coat, and overall wellbeing for growing cats.",
+    "image": "https://i.postimg.cc/RV0K73Nr/2.jpg"
+  },
+  {
+    "id": 3,
+    "product_name": "Duvo Plus Soft Salmon Sticks 50g",
+    "price": "$3.00",
+    "description": "Soft salmon sticks for cats, rich in protein and omega-3, promoting healthy skin, shiny fur, and providing tasty, enjoyable treats daily.",
+    "image": "https://i.postimg.cc/vT09Ry2J/3.jpg"
+  },
+  {
+    "id": 4,
+    "product_name": "Duvo Plus Soft Fish Bites 50g",
+    "price": "$2.00",
+    "description": "Soft fish bites for cats with real fish flavor, packed with nutrients, supporting healthy digestion, energy, and an active, playful lifestyle daily.",
+    "image": "https://i.postimg.cc/6Tsc3nNp/4.webp"
+  },
+  {
+    "id": 5,
+    "product_name": "Duvo Plus Cat Crunchy Fish Puffs 50g",
+    "price": "$4.00",
+    "description": "Crunchy fish puffs for cats providing tasty, healthy treats with protein and minerals, helping dental care and supporting strong teeth effectively.",
+    "image": "https://i.postimg.cc/7L72HdZN/5.webp"
+  },
+  {
+    "id": 6,
+    "product_name": "Duvo Plus Cat Crunchy Chicken Puffs 50g",
+    "price": "$3.00",
+    "description": "Crunchy chicken puffs for cats, delicious and nutritious, providing essential vitamins, supporting energy levels, and maintaining healthy teeth and gums daily.",
+    "image": "https://i.postimg.cc/Znb3DnHP/6.avif"
+  },
+  {
+    "id": 7,
+    "product_name": "Whiskas Adult Dry Cat Food Ocean Fish Flavor",
+    "price": "$12.00",
+    "description": "Dry cat food with ocean fish flavor, providing complete nutrition, balanced vitamins and minerals, supporting healthy growth, energy, and overall adult cat wellbeing.",
+    "image": "https://i.postimg.cc/NFdThtCm/7.avif"
+  },
+  {
+    "id": 8,
+    "product_name": "Bellotta Real Tuna Topping Shrimp in Jelly",
+    "price": "$4.50",
+    "description": "Tuna and shrimp flavored jelly cat food, rich in protein, moisture, and essential nutrients, keeping cats hydrated, healthy, energetic, and satisfied after meals.",
+    "image": "https://i.postimg.cc/rmCxJxSn/8.jpg"
+  },
+  {
+    "id": 9,
+    "product_name": "Haisenpet Premium Cat Food Chicken, Tuna & Turkey 3Kg",
+    "price": "$15.00",
+    "description": "Premium dry cat food with chicken, tuna, and turkey, providing balanced nutrition, supporting strong muscles, healthy skin, shiny coat, and maintaining active lifestyle daily.",
+    "image": "https://i.postimg.cc/fWCYS7WT/9.jpg"
+  },
+  {
+    "id": 10,
+    "product_name": "Kaniva Tuna & Topping Salmon in Gravy Pouch",
+    "price": "$2.80",
+    "description": "Gravy pouch cat food with tuna and salmon topping, offering tasty, healthy meal, rich in protein, vitamins, and minerals for active and happy adult cats daily.",
+    "image": "https://i.postimg.cc/FRg3Z3jp/10.jpg"
+  }
+]

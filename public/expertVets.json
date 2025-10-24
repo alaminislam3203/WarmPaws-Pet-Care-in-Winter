@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Sarah Johnson",
+    "specialization": "Veterinary Surgeon",
+    "description": "Dr Sarah Johnson has over 10 years of experience in veterinary surgery. She specializes in small animal procedures. She is skilled in emergency surgeries and minimally invasive techniques. Her focus is always on ensuring the best recovery for her patients.",
+    "email": "sarah.johnson@example.com",
+    "image": "https://i.postimg.cc/v84wLrxJ/Dr-Sarah-Johnson-1.png",
+    "rating": 4.8,
+    "degree": "Doctor of Veterinary Medicine (DVM)",
+    "education": "University of California, Davis",
+    "location": "San Francisco, California"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Michael Smith",
+    "specialization": "Animal Nutritionist",
+    "description": "Dr Michael Smith is an expert in pet nutrition. He creates balanced diets for pets of all ages. He advises pet owners on supplements and feeding schedules. His goal is to improve pets' overall health and longevity.",
+    "email": "michael.smith@example.com",
+    "image": "https://i.postimg.cc/wx1YcXR2/Dr-Michael-Smith-2.png",
+    "rating": 4.6,
+    "degree": "PhD in Animal Nutrition",
+    "education": "Cornell University",
+    "location": "Austin, Texas"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Emily Davis",
+    "specialization": "Exotic Pet Specialist",
+    "description": "Dr Emily Davis provides care for exotic animals like birds, reptiles, and small mammals. She handles unique medical conditions with expertise. She emphasizes safe handling and stress-free treatments. Her aim is to ensure long and healthy lives for exotic pets.",
+    "email": "emily.davis@example.com",
+    "image": "https://i.postimg.cc/RhkRc5Jw/Dr-Emily-Davis-3.png",
+    "rating": 4.7,
+    "degree": "Doctor of Veterinary Medicine (DVM)",
+    "education": "University of Florida College of Veterinary Medicine",
+    "location": "Miami, Florida"
+  },
+  {
+    "id": 4,
+    "name": "Dr. James Wilson",
+    "specialization": "Dentistry Specialist",
+    "description": "Dr James Wilson focuses on dental care for pets. He performs cleanings, extractions, and oral surgeries. He educates owners about daily dental hygiene. His mission is to prevent oral diseases and ensure healthy teeth.",
+    "email": "james.wilson@example.com",
+    "image": "https://i.postimg.cc/wMCVh8yS/Dr-James-Wilson-4.jpg",
+    "rating": 4.5,
+    "degree": "DVM, Dental Certification in Veterinary Dentistry",
+    "education": "Ohio State University",
+    "location": "Columbus, Ohio"
+  },
+  {
+    "id": 5,
+    "name": "Dr. Olivia Martinez",
+    "specialization": "Dermatologist",
+    "description": "Dr Olivia Martinez treats skin conditions in pets. She addresses allergies, infections, and coat issues. She recommends proper grooming and skin care routines. Her goal is to maintain healthy skin and fur for all pets.",
+    "email": "olivia.martinez@example.com",
+    "image": "https://i.postimg.cc/D0J6JyZx/Dr-Olivia-Martinez-5.jpg",
+    "rating": 4.9,
+    "degree": "Doctor of Veterinary Medicine (DVM)",
+    "education": "Texas A&M University",
+    "location": "Dallas, Texas"
+  },
+  {
+    "id": 6,
+    "name": "Dr. William Brown",
+    "specialization": "Cardiologist",
+    "description": "Dr William Brown specializes in pet heart health. He diagnoses and treats cardiovascular diseases. He provides long-term monitoring and preventative care. His aim is to improve heart function and pet quality of life.",
+    "email": "william.brown@example.com",
+    "image": "https://i.postimg.cc/ZnBBFW6c/Dr-William-Brown-6.jpg",
+    "rating": 4.6,
+    "degree": "DVM, Cardiology Residency",
+    "education": "University of Pennsylvania School of Veterinary Medicine",
+    "location": "Philadelphia, Pennsylvania"
+  },
+  {
+    "id": 7,
+    "name": "Dr. Sophia Taylor",
+    "specialization": "Behavior Specialist",
+    "description": "Dr Sophia Taylor helps pets with behavioral challenges. She addresses anxiety, aggression, and training issues. She creates customized behavior modification plans. Her goal is to ensure happy and well-adjusted pets.",
+    "email": "sophia.taylor@example.com",
+    "image": "https://i.postimg.cc/LX0v8ZHV/Dr-Sophia-Taylor-7.jpg",
+    "rating": 4.7,
+    "degree": "DVM, Animal Behavior Certification",
+    "education": "University of Edinburgh",
+    "location": "New York City, New York"
+  },
+  {
+    "id": 8,
+    "name": "Dr. Benjamin Lee",
+    "specialization": "Orthopedic Specialist",
+    "description": "Dr Benjamin Lee treats bone and joint issues in pets. He performs fracture repairs and joint surgeries. He provides rehabilitation and recovery guidance. His focus is to restore mobility and comfort for pets.",
+    "email": "benjamin.lee@example.com",
+    "image": "https://i.postimg.cc/vTghgHB7/Dr-Benjamin-Lee-8.png",
+    "rating": 4.5,
+    "degree": "DVM, MS in Orthopedic Surgery",
+    "education": "University of Melbourne",
+    "location": "Los Angeles, California"
+  },
+  {
+    "id": 9,
+    "name": "Dr. Isabella Anderson",
+    "specialization": "Ophthalmologist",
+    "description": "Dr Isabella Anderson specializes in pet eye care. She diagnoses vision problems and treats infections. She performs surgical and non-surgical procedures. Her goal is to preserve and improve pets' eyesight.",
+    "email": "isabella.anderson@example.com",
+    "image": "https://i.postimg.cc/9MN1QqWt/Dr-Isabella-Anderson-9.jpg",
+    "rating": 4.8,
+    "degree": "DVM, Diplomate in Veterinary Ophthalmology",
+    "education": "University of Glasgow",
+    "location": "Seattle, Washington"
+  },
+  {
+    "id": 10,
+    "name": "Dr. Daniel Thomas",
+    "specialization": "Internal Medicine Specialist",
+    "description": "Dr Daniel Thomas treats internal diseases in pets. He manages liver, kidney, and digestive conditions. He provides comprehensive diagnostic and treatment plans. His goal is to improve pets' overall health and well-being.",
+    "email": "daniel.thomas@example.com",
+    "image": "https://i.postimg.cc/d3k6kt3w/Dr-Daniel-Thomas-10.png",
+    "rating": 4.6,
+    "degree": "DVM, Residency in Internal Medicine",
+    "education": "University of Sydney",
+    "location": "Chicago, Illinois"
+  }
+]

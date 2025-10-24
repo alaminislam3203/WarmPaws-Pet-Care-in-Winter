@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/85JdfGV5/1.png",
+    "question": "How can I keep my pet warm during winter nights?",
+    "answer": "Make sure your pet has a cozy blanket or a soft bed placed away from cold floors and drafts. Use thermal or self-warming blankets to help retain body heat. You can layer blankets or provide a small heated pad. Consider moving their bed to a warmer part of the house during extremely cold nights. Regularly check if your pet seems cold and adjust accordingly."
+  },
+  {
+    "id": 2,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/TwLj5xXY/2.avif",
+    "question": "Should pets wear sweaters or jackets in winter?",
+    "answer": "Yes! Especially for small breeds or pets with short fur, sweaters and jackets help retain body heat. Always choose one that fits snugly but not too tight. Avoid leaving wet clothing on your pet, as it can make them colder. Layering light clothing can be effective for extremely cold days. Ensure the clothing does not restrict movement or irritate the skin."
+  },
+  {
+    "id": 3,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/76G1J4yw/3.jpg",
+    "question": "How do I protect my pet's paws from cold and snow?",
+    "answer": "Before walks, apply paw balm or petroleum jelly to protect against ice and salt. Use pet booties to keep their paws warm and clean. After returning home, wipe paws to remove snow, ice, or chemicals. Regular checks prevent cracks, irritation, or infections. Moisturize paws if dryness appears."
+  },
+  {
+    "id": 4,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/76G1J4yH/4.webp",
+    "question": "How do I prevent my pet's water from freezing outdoors?",
+    "answer": "Use a heated or insulated water bowl to keep water liquid. If not available, check and refill water frequently. Ensure water is always fresh to prevent dehydration. In freezing conditions, place the bowl in a sheltered spot and consider using a floating object to reduce freezing."
+  },
+  {
+    "id": 5,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/R0bQ0F2F/5.webp",
+    "question": "How can I keep my pet active indoors during winter?",
+    "answer": "Engage your pet with indoor games like fetch, tug-of-war, or hide-and-seek. Use puzzle feeders and treat-dispensing toys for mental stimulation. Short training sessions keep them active, happy, and mentally sharp. Rotate toys to maintain interest and prevent boredom during long indoor periods."
+  },
+  {
+    "id": 6,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/GpSJp263/6.jpg",
+    "question": "Should I change my pet's diet in winter?",
+    "answer": "Some pets need slightly more calories in winter to stay warm, especially if they spend time outdoors. Avoid overfeeding as indoor activity might decrease. Consult your vet for proper nutritional adjustments. Consider adding omega-3 supplements to maintain coat health in dry winter months."
+  },
+  {
+    "id": 7,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/Ls0BsXG2/7.jpg",
+    "question": "How often should I bathe my pet in winter?",
+    "answer": "Limit baths in winter because frequent washing removes natural skin oils. Use lukewarm water and moisturizing shampoo. Dry your pet thoroughly after every bath. Spot clean when necessary and maintain regular brushing to reduce dirt and maintain coat health."
+  },
+  {
+    "id": 8,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/rpYCpm7F/8.avif",
+    "question": "Is it safe to keep my pet near heaters or fireplaces?",
+    "answer": "Keep pets at a safe distance from heaters, fireplaces, and radiators to prevent burns. Always use protective screens around open flames. Never leave pets unattended near heating sources. Monitor their behavior and ensure they cannot knock over objects or get too close to heat sources."
+  },
+  {
+    "id": 9,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/DzYdzZHR/9.jpg",
+    "question": "Do pets need special vet checkups in winter?",
+    "answer": "Yes, especially senior pets or those with arthritis. Cold weather can worsen joint pain and mobility issues. Regular vet checkups help adjust treatments or supplements. Keep an eye on changes in activity, appetite, or mobility during winter months."
+  },
+  {
+    "id": 10,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/7LQML6jq/10.webp",
+    "question": "How can I ensure my indoor pets get enough sunlight?",
+    "answer": "Place your pet's bed near windows where sunlight enters. Sunlight boosts mood, vitamin D production, and regulates sleep. Use safe pet-friendly lamps if natural light is limited. Rotate resting spots to ensure maximum sunlight exposure."
+  },
+  {
+    "id": 11,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/cJ5MJH2D/11.jpg",
+    "question": "Why is an ID tag important during winter walks?",
+    "answer": "Snow, fog, or dark evenings reduce visibility. A visible, updated ID tag ensures quick recovery if your pet gets lost. GPS collars or microchipping provide added security. Always keep pets leashed during winter walks."
+  },
+  {
+    "id": 12,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/9ffYVT8v/12.jpg",
+    "question": "How to keep outdoor pets safe in freezing temperatures?",
+    "answer": "Provide insulated, waterproof shelters with straw or hay. Ensure entrances face away from wind and floors stay dry. Check water bowls frequently to prevent freezing. Provide extra food to maintain energy and body heat. Regularly monitor outdoor pets for signs of cold stress."
+  },
+  {
+    "id": 13,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/VNHBN6pK/13.jpg",
+    "question": "Can winter cause allergies in pets?",
+    "answer": "Yes, indoor heating dries the air and can irritate skin. Use a humidifier to maintain moisture. Brush pets regularly to distribute natural oils. Keep bedding clean to reduce dust and allergens. Monitor for signs of itching or redness."
+  },
+  {
+    "id": 14,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/fbbfZX2B/14.jpg",
+    "question": "Why should I keep antifreeze away from pets?",
+    "answer": "Antifreeze contains ethylene glycol, which is highly toxic and attractive to pets due to its sweet taste. Even a small amount can be fatal. Store it securely and clean spills immediately. Never let pets near driveways, garages, or storage areas with antifreeze."
+  },
+  {
+    "id": 15,
+    "category": "Winter Care Tips for Pets",
+    "image": "https://i.postimg.cc/5ttS1v7p/15.jpg",
+    "question": "How can I keep my pet visible during dark winter walks?",
+    "answer": "Use reflective collars, leashes, or harnesses for visibility. LED clip-on lights or glow-in-the-dark tags help in low light. Walk in well-lit areas and keep pets on a leash. Regularly check equipment and replace worn reflective gear."
+  }
+]
