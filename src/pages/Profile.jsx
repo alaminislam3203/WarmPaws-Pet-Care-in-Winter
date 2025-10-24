@@ -3,6 +3,7 @@ import { AuthContext } from '../provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import userIcon from '../assets/user.png';
 
 const Profile = () => {
   const { user, updateUser } = useContext(AuthContext);
@@ -10,14 +11,14 @@ const Profile = () => {
   const [photoURL, setPhotoURL] = useState(user?.photoURL || '');
   const [previewURL, setPreviewURL] = useState(user?.photoURL || '');
   const [isEditing, setIsEditing] = useState(false);
-  const [loading, setLoading] = useState(true); // loader state
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (!user) {
       navigate('/auth/login');
     } else {
-      setLoading(false); // data is ready
+      setLoading(false);
     }
   }, [user, navigate]);
 
@@ -51,9 +52,13 @@ const Profile = () => {
 
         <div className="flex flex-col items-center mb-6">
           <img
-            src={previewURL || 'https://via.placeholder.com/150'}
+            src={previewURL || userIcon}
             alt="User"
             className="w-32 h-32 rounded-full object-cover border-4 border-gray-300 shadow-md mb-4"
+            onError={e => {
+              e.target.onerror = null;
+              e.target.src = userIcon;
+            }}
           />
 
           <div className="text-center mb-2">

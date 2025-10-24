@@ -1,5 +1,11 @@
+import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
+
+// Layouts
 import HomeLayout from '../layouts/HomeLayout';
+import AuthLayout from '../layouts/AuthLayout';
+
+// Pages
 import Home from '../pages/Home';
 import Services from '../pages/Services';
 import ServiceDetails from '../pages/ServiceDetails';
@@ -7,7 +13,9 @@ import Profile from '../pages/Profile';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import ForgotPassword from '../pages/ForgotPassword';
-import AuthLayout from '../layouts/AuthLayout';
+import NotFound from '../pages/NotFound';
+
+// Provider
 import PrivateRoute from '../provider/PrivateRoute';
 
 const router = createBrowserRouter([
@@ -46,11 +54,7 @@ const router = createBrowserRouter([
   },
   {
     path: '*',
-    element: (
-      <h2 className="text-center text-3xl mt-10 text-red-600 font-semibold">
-        Error 404 — Page Not Found
-      </h2>
-    ),
+    element: <NotFound />,
   },
 ]);
 
