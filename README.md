@@ -102,17 +102,3 @@ libraries for animations and interactivity.
    browser.
 
 ---
-
-## Project Structure (Key Files)
-
-```
-src/
-├─ assets/                # Images & icons
-├─ components/            # Reusable components (Navbar, Footer, SwipeSlider)
-├─ pages/                 # Page-level components (Home, Login, Profile, ExpertVets)
-├─ provider/              # Auth context provider
-├─ firebase.config.js     # Firebase initialization
-└─ App.jsx
-```
-
----
