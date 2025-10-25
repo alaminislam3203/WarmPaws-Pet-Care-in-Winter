@@ -4,6 +4,7 @@ import { AuthContext } from '../provider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import toast from 'react-hot-toast';
+import authBg from '../assets/auth-bg.jpg';
 
 const Login = () => {
   const [emailInput, setEmailInput] = useState('');
@@ -41,7 +42,10 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-gray-50">
+    <div
+      className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${authBg})` }}
+    >
       <div className="card bg-base-100 w-full max-w-sm shadow-2xl py-5">
         <h2 className="font-semibold text-2xl text-center mb-4">
           Login to your account
@@ -89,7 +93,15 @@ const Login = () => {
             </Link>
           </div>
 
-          <button type="submit" className="btn btn-neutral mt-2 w-full">
+          <button
+            type="submit"
+            className="mt-2 w-full text-white font-semibold rounded-lg py-2 transition duration-300"
+            style={{
+              backgroundColor: '#40E0D0',
+            }}
+            onMouseEnter={e => (e.target.style.backgroundColor = '#2ec4b6')}
+            onMouseLeave={e => (e.target.style.backgroundColor = '#40E0D0')}
+          >
             Login
           </button>
 

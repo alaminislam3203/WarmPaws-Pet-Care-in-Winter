@@ -2,14 +2,14 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
-// Your web app's Firebase configuration
+// Firebase configuration from environment variables
 const firebaseConfig = {
-  apiKey: 'AIzaSyD1RwLHuSMj-lcEQKGJYWPxoaPxA1L6syw',
-  authDomain: 'warmpaws-pet-care-in-win-a8d38.firebaseapp.com',
-  projectId: 'warmpaws-pet-care-in-win-a8d38',
-  storageBucket: 'warmpaws-pet-care-in-win-a8d38.firebasestorage.app',
-  messagingSenderId: '922331715725',
-  appId: '1:922331715725:web:8336b0beefec67d830eac4',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase

@@ -25,22 +25,22 @@ const HomeLayout = () => {
         {isHome && (
           <>
             {/* Services Section */}
-            <section className="mt-10 w-full">
+            <section className="w-full">
               <Services />
             </section>
 
             {/* Winter Care Tips Section */}
-            <section className="mt-14 w-full">
+            <section className="w-full">
               <WinterCareTips />
             </section>
 
             {/* Expert Vets Section */}
-            <section className="mt-14 w-full">
+            <section className="w-full">
               <ExpertVets />
             </section>
 
             {/*Products Section */}
-            <section className="mt-14 w-full">
+            <section className="w-full">
               <ProductsSection />
             </section>
           </>

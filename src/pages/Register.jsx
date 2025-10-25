@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import authBg from '../assets/auth-bg.jpg';
 
 const Register = () => {
   const { createUser, setUser, updateUser } = useContext(AuthContext);
@@ -58,7 +59,10 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-gray-50 px-4">
+    <div
+      className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-cover bg-center bg-no-repeat px-4"
+      style={{ backgroundImage: `url(${authBg})` }}
+    >
       <div className="card bg-white w-full max-w-sm shadow-2xl py-6 px-5 rounded-xl">
         <h2 className="font-semibold text-2xl text-center mb-3">
           Sign Up Your Account
@@ -116,7 +120,10 @@ const Register = () => {
 
             <button
               type="submit"
-              className="btn btn-primary w-full mt-6 font-semibold"
+              className="btn w-full text-white mt-6 font-semibold rounded-lg transition duration-300"
+              style={{ backgroundColor: '#40E0D0' }}
+              onMouseEnter={e => (e.target.style.backgroundColor = '#2ec4b6')}
+              onMouseLeave={e => (e.target.style.backgroundColor = '#40E0D0')}
             >
               Sign Up
             </button>

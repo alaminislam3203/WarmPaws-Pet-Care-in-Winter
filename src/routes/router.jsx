@@ -16,6 +16,9 @@ import ForgotPassword from '../pages/ForgotPassword';
 import NotFound from '../pages/NotFound';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import TermsOfService from '../pages/TermsOfService';
+import RefundPolicy from '../pages/RefundPolicy';
+import ShippingPolicy from '../pages/ShippingPolicy';
+import About from '../pages/About';
 
 // Provider
 import PrivateRoute from '../provider/PrivateRoute';
@@ -43,16 +46,11 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-
-      {
-        path: 'privacy-policy',
-        element: <PrivacyPolicy />,
-      },
-
-      {
-        path: 'terms-of-service',
-        element: <TermsOfService />,
-      },
+      { path: 'privacy-policy', element: <PrivacyPolicy /> },
+      { path: 'terms-of-service', element: <TermsOfService /> },
+      { path: 'refund-policy', element: <RefundPolicy /> },
+      { path: 'shipping-policy', element: <ShippingPolicy /> },
+      { path: 'about', element: <About /> },
     ],
   },
   {

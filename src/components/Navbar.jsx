@@ -67,7 +67,7 @@ const Navbar = () => {
   return (
     <nav
       className="shadow-md px-6 py-2 sm:py-3 relative"
-      style={{ backgroundColor: '#045494' }}
+      style={{ backgroundColor: '#0a183b' }}
     >
       <div className="flex justify-between items-center">
         {/* Logo Section */}
