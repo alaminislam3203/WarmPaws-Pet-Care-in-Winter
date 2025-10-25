@@ -4,7 +4,7 @@ import { AuthContext } from '../provider/AuthProvider';
 import userIcon from '../assets/user.png';
 import LogoIcon from '../assets/LogoIcon.png';
 import { HiMenu, HiX } from 'react-icons/hi';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -112,7 +112,7 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Auth Buttons */}
+          {/* Auth Buttons (Desktop) */}
           {user ? (
             <button
               onClick={handleLogOut}
@@ -121,12 +121,20 @@ const Navbar = () => {
               LogOut
             </button>
           ) : (
-            <Link
-              to="/auth/login"
-              className="btn btn-primary px-3 py-1 text-sm hidden md:flex justify-center items-center text-center"
-            >
-              Login
-            </Link>
+            <div className="hidden md:flex gap-2">
+              <Link
+                to="/auth/login"
+                className="btn btn-primary px-3 py-1 text-sm"
+              >
+                Login
+              </Link>
+              <Link
+                to="/auth/signup"
+                className="btn btn-primary px-3 py-1 text-sm bg-white text-[#045494] hover:bg-gray-200 font-semibold"
+              >
+                Register
+              </Link>
+            </div>
           )}
 
           {/* Mobile Menu Button */}
@@ -151,15 +159,20 @@ const Navbar = () => {
               LogOut
             </button>
           ) : (
-            <Link to="/auth/login" className="btn btn-primary w-3/4">
-              Login
-            </Link>
+            <div className="flex flex-col gap-3 w-3/4">
+              <Link to="/auth/login" className="btn btn-primary w-full">
+                Login
+              </Link>
+              <Link
+                to="/auth/signup"
+                className="btn bg-white text-[#045494] font-semibold hover:bg-gray-200 w-full"
+              >
+                Register
+              </Link>
+            </div>
           )}
         </div>
       )}
-
-      {/* Toast Container */}
-      <Toaster position="top-center" />
     </nav>
   );
 };

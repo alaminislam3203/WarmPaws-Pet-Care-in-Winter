@@ -14,6 +14,8 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import ForgotPassword from '../pages/ForgotPassword';
 import NotFound from '../pages/NotFound';
+import PrivacyPolicy from '../pages/PrivacyPolicy';
+import TermsOfService from '../pages/TermsOfService';
 
 // Provider
 import PrivateRoute from '../provider/PrivateRoute';
@@ -40,6 +42,16 @@ const router = createBrowserRouter([
             <Profile />
           </PrivateRoute>
         ),
+      },
+
+      {
+        path: 'privacy-policy',
+        element: <PrivacyPolicy />,
+      },
+
+      {
+        path: 'terms-of-service',
+        element: <TermsOfService />,
       },
     ],
   },

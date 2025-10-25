@@ -21,9 +21,7 @@ const Login = () => {
 
     signIn(email, password)
       .then(() => {
-        const id = toast.success('Login successful!');
-        setTimeout(() => toast.dismiss(id), 4000);
-
+        toast.success('Login successful!');
         navigate(from);
       })
       .catch(err => {

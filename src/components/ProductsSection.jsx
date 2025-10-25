@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -69,8 +69,6 @@ const ProductsSection = () => {
           ))}
         </div>
       </div>
-
-      <Toaster position="top-center" />
     </section>
   );
 };
