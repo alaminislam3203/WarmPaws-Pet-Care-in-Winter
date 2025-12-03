@@ -1,21 +1,11 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../provider/AuthProvider';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 const ServiceDetails = () => {
-  const { user } = useContext(AuthContext);
-  const navigate = useNavigate();
   const { serviceId } = useParams();
   const [service, setService] = useState(null);
   const [formData, setFormData] = useState({ name: '', email: '' });
-
-  // Redirect to login if not logged in
-  useEffect(() => {
-    if (!user) {
-      navigate('/auth/login', { state: { from: `/services/${serviceId}` } });
-    }
-  }, [user, navigate, serviceId]);
 
   // Fetch service JSON data
   useEffect(() => {
@@ -34,7 +24,9 @@ const ServiceDetails = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    toast.success(' Service booked successfully!');
+    toast.success('Service booked successfully!', {
+      position: 'top-center',
+    });
     setFormData({ name: '', email: '' });
   };
 
@@ -45,11 +37,10 @@ const ServiceDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4">
-      {/* Toast at top-center */}
-
+    <div className="min-h-screen bg-gray-50 py-10 px-4 w-screen overflow-x-hidden">
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6">
         <h1 className="text-3xl font-bold mb-4">{service.serviceName}</h1>
+
         <img
           src={service.image}
           alt={service.serviceName}
@@ -84,33 +75,36 @@ const ServiceDetails = () => {
           </p>
         </div>
 
-        {/* Book Service Form */}
+        {/* Booking Form */}
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <h2 className="text-2xl font-semibold mb-2">Book This Service</h2>
+
           <div>
             <label className="block mb-1 font-medium">Name</label>
             <input
               type="text"
               name="name"
+              className="input input-bordered w-full"
               value={formData.name}
               onChange={handleChange}
-              className="input input-bordered w-full"
               placeholder="Your Name"
               required
             />
           </div>
+
           <div>
             <label className="block mb-1 font-medium">Email</label>
             <input
               type="email"
               name="email"
+              className="input input-bordered w-full"
               value={formData.email}
               onChange={handleChange}
-              className="input input-bordered w-full"
               placeholder="Your Email"
               required
             />
           </div>
+
           <button type="submit" className="btn btn-primary w-full mt-2">
             Book Now
           </button>

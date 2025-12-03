@@ -1,41 +1,44 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
-import 'react-toastify/dist/ReactToastify.css';
+
 import userIcon from '../assets/user.png';
-import toast from 'react-hot-toast';
+import { FaUserAlt, FaEnvelope, FaRegUserCircle, FaEdit } from 'react-icons/fa';
 
 const Profile = () => {
-  const { user, updateUser } = useContext(AuthContext);
-  const [name, setName] = useState(user?.displayName || '');
-  const [photoURL, setPhotoURL] = useState(user?.photoURL || '');
-  const [previewURL, setPreviewURL] = useState(user?.photoURL || '');
-  const [isEditing, setIsEditing] = useState(false);
+  const { user } = useContext(AuthContext);
+
+  const [name, setName] = useState('');
+  const [photo, setPhoto] = useState('');
   const [loading, setLoading] = useState(true);
+
   const navigate = useNavigate();
+
+  // Load localStorage OR Auth Data
+  const loadProfileData = () => {
+    const storedName = localStorage.getItem('userName');
+    const storedPhoto = localStorage.getItem('userPhoto');
+
+    setName(storedName || user?.displayName || 'No Name');
+    setPhoto(storedPhoto || user?.photoURL || userIcon);
+  };
 
   useEffect(() => {
     if (!user) {
       navigate('/auth/login');
     } else {
+      loadProfileData();
       setLoading(false);
     }
   }, [user, navigate]);
 
-  const handleUpdate = e => {
-    e.preventDefault();
-    setLoading(true);
-    updateUser({ displayName: name, photoURL })
-      .then(() => {
-        setIsEditing(false);
-        toast.success('Profile updated successfully!');
-      })
-      .catch(err => {
-        toast.error('Failed to update profile.');
-        console.error(err);
-      })
-      .finally(() => setLoading(false));
-  };
+  // Live update when EditProfile updates localStorage
+  useEffect(() => {
+    const handleStorageUpdate = () => loadProfileData();
+    window.addEventListener('storage', handleStorageUpdate);
+
+    return () => window.removeEventListener('storage', handleStorageUpdate);
+  }, []);
 
   if (!user || loading) {
     return (
@@ -47,12 +50,16 @@ const Profile = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-start bg-gray-100 py-10 px-4">
-      <div className="card w-full max-w-md shadow-xl bg-white rounded-xl p-6">
-        <h2 className="text-2xl font-bold text-center mb-6">My Profile</h2>
+      <div className="w-full max-w-md bg-white shadow-xl rounded-xl p-7">
+        <h2 className="text-3xl font-extrabold text-center mb-8 flex justify-center items-center gap-2">
+          <FaRegUserCircle className="text-[#0A183B] text-4xl" />
+          My Profile
+        </h2>
 
+        {/* Avatar */}
         <div className="flex flex-col items-center mb-6">
           <img
-            src={previewURL || userIcon}
+            src={photo}
             alt="User"
             className="w-32 h-32 rounded-full object-cover border-4 border-gray-300 shadow-md mb-4"
             onError={e => {
@@ -60,59 +67,33 @@ const Profile = () => {
               e.target.src = userIcon;
             }}
           />
+        </div>
 
-          <div className="text-center mb-2">
-            <p className="text-sm text-gray-500">Full Name:</p>
-            <p className="text-lg font-semibold">
-              {user?.displayName || 'No Name'}
-            </p>
+        {/* User Info */}
+        <div className="space-y-6">
+          <div className="flex items-center gap-4 bg-gray-100 p-4 rounded-lg shadow-sm">
+            <FaUserAlt className="text-2xl text-[#0A183B]" />
+            <div>
+              <p className="text-sm text-gray-500">Full Name</p>
+              <p className="text-lg font-semibold">{name}</p>
+            </div>
           </div>
 
-          <div className="text-center">
-            <p className="text-sm text-gray-500">Email Address:</p>
-            <p className="text-gray-500">{user?.email}</p>
+          <div className="flex items-center gap-4 bg-gray-100 p-4 rounded-lg shadow-sm">
+            <FaEnvelope className="text-2xl text-[#0A183B]" />
+            <div>
+              <p className="text-sm text-gray-500">Email Address</p>
+              <p className="text-gray-700">{user?.email}</p>
+            </div>
           </div>
         </div>
 
-        {!isEditing ? (
-          <button
-            onClick={() => setIsEditing(true)}
-            className="btn btn-primary w-full"
-          >
-            Update Profile
-          </button>
-        ) : (
-          <form onSubmit={handleUpdate} className="flex flex-col gap-4">
-            <div>
-              <label className="label">Full Name</label>
-              <input
-                type="text"
-                value={name}
-                onChange={e => setName(e.target.value)}
-                className="input input-bordered w-full"
-                required
-              />
-            </div>
-
-            <div>
-              <label className="label">Photo URL</label>
-              <input
-                type="text"
-                value={photoURL}
-                onChange={e => {
-                  setPhotoURL(e.target.value);
-                  setPreviewURL(e.target.value);
-                }}
-                className="input input-bordered w-full"
-                required
-              />
-            </div>
-
-            <button type="submit" className="btn btn-primary mt-2">
-              Submit
-            </button>
-          </form>
-        )}
+        <button
+          onClick={() => navigate('/edit-profile')}
+          className="w-full mt-7 flex items-center justify-center gap-2 bg-[#0A183B] text-white py-3 rounded-lg shadow-md hover:bg-[#132a55] transition-all duration-300 font-semibold"
+        >
+          <FaEdit className="text-lg" /> Edit Profile
+        </button>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const SwipeSlider = () => {
   };
 
   return (
-    <div className="relative w-full h-[90vh] sm:h-[95vh] lg:h-screen overflow-hidden rounded-none">
+    <div className="relative w-[90%] mx-auto h-[50vh] sm:h-[70vh] lg:h-[70vh] max-w-7xl overflow-hidden rounded-2xl mt-8 mb-5">
       {slides.length > 0 ? (
         <Swiper
           modules={[Navigation, Autoplay]}

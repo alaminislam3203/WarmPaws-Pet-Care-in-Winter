@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import authBg from '../assets/auth-bg.jpg';
 
 const Register = () => {
   const { createUser, setUser, updateUser } = useContext(AuthContext);
@@ -15,7 +14,6 @@ const Register = () => {
     const form = e.target;
     const name = form.name.value.trim();
     const email = form.email.value.trim();
-    const photo = form.photo.value.trim();
     const password = form.password.value;
 
     // === Name Validation ===
@@ -42,10 +40,10 @@ const Register = () => {
     createUser(email, password)
       .then(result => {
         const user = result.user;
-        updateUser({ displayName: name, photoURL: photo })
+        updateUser({ displayName: name })
           .then(() => {
-            setUser({ ...user, displayName: name, photoURL: photo });
-            toast.success(' Account created successfully!');
+            setUser({ ...user, displayName: name });
+            toast.success('Account created successfully!');
             setTimeout(() => navigate('/'), 1500);
           })
           .catch(error => {
@@ -59,10 +57,7 @@ const Register = () => {
   };
 
   return (
-    <div
-      className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-cover bg-center bg-no-repeat px-4"
-      style={{ backgroundImage: `url(${authBg})` }}
-    >
+    <div className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-gray-100 px-4">
       <div className="card bg-white w-full max-w-sm shadow-2xl py-6 px-5 rounded-xl">
         <h2 className="font-semibold text-2xl text-center mb-3">
           Sign Up Your Account
@@ -87,16 +82,6 @@ const Register = () => {
               type="email"
               className="input input-bordered w-full"
               placeholder="Enter your email"
-              required
-            />
-
-            {/* Photo URL */}
-            <label className="label font-medium mt-3">Photo URL</label>
-            <input
-              name="photo"
-              type="text"
-              className="input input-bordered w-full"
-              placeholder="Enter photo URL"
               required
             />
 

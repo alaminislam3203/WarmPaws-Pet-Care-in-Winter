@@ -19,9 +19,13 @@ import TermsOfService from '../pages/TermsOfService';
 import RefundPolicy from '../pages/RefundPolicy';
 import ShippingPolicy from '../pages/ShippingPolicy';
 import About from '../pages/About';
+import Contact from '../pages/Contact';
+import EditProfile from '../pages/EditProfile';
 
 // Provider
 import PrivateRoute from '../provider/PrivateRoute';
+import AllWinterCareTips from '../pages/AllWinterCareTips';
+import AllVets from '../pages/AllVets';
 
 const router = createBrowserRouter([
   {
@@ -30,14 +34,11 @@ const router = createBrowserRouter([
     children: [
       { path: '', element: <Home /> },
       { path: 'services', element: <Services /> },
-      {
-        path: 'services/:serviceId',
-        element: (
-          <PrivateRoute>
-            <ServiceDetails />
-          </PrivateRoute>
-        ),
-      },
+
+      { path: 'services/:serviceId', element: <ServiceDetails /> },
+      { path: 'tips', element: <AllWinterCareTips /> },
+      { path: 'vets', element: <AllVets /> },
+
       {
         path: 'profile',
         element: (
@@ -46,13 +47,23 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: 'edit-profile',
+        element: (
+          <PrivateRoute>
+            <EditProfile />
+          </PrivateRoute>
+        ),
+      },
       { path: 'privacy-policy', element: <PrivacyPolicy /> },
       { path: 'terms-of-service', element: <TermsOfService /> },
       { path: 'refund-policy', element: <RefundPolicy /> },
       { path: 'shipping-policy', element: <ShippingPolicy /> },
       { path: 'about', element: <About /> },
+      { path: 'contact', element: <Contact /> },
     ],
   },
+
   {
     path: '/auth',
     element: <AuthLayout />,
@@ -62,6 +73,7 @@ const router = createBrowserRouter([
       { path: 'forgot-password', element: <ForgotPassword /> },
     ],
   },
+
   {
     path: '*',
     element: <NotFound />,

@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
-// React Icons
 import { FaSnowflake, FaDog, FaPaw } from 'react-icons/fa';
 
-const WinterCareTips = () => {
+const AllWinterCareTips = () => {
   const [tips, setTips] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
-    // Initialize AOS animations
     AOS.init({
       duration: 1000,
       offset: 100,
@@ -19,40 +14,27 @@ const WinterCareTips = () => {
       once: true,
     });
 
-    // Load data
     fetch('/winterCareTips.json')
       .then(res => res.json())
       .then(data => {
         const sortedTips = data.sort((a, b) => a.id - b.id);
         setTips(sortedTips);
       })
-      .catch(err => console.error('Failed to load tips:', err));
+      .catch(err => console.error(err));
   }, []);
 
-  // Show only first 4 tips on home
-  const displayedTips = tips.slice(0, 4);
-
   return (
-    <section className="bg-[#F9FAFB] py-14">
+    <section className="bg-[#F9FAFB] py-14 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Title */}
         <h2
           className="text-4xl font-bold text-center text-gray-800 mb-10"
           data-aos="fade-down"
         >
-          Winter Care Tips for Pets
+          All Winter Care Tips for Pets
         </h2>
-        <p
-          className="text-center text-gray-600 mb-14 max-w-2xl mx-auto"
-          data-aos="fade-up"
-        >
-          Help your furry friends stay warm, healthy, and happy during the
-          chilly winter months with these expert-approved tips.
-        </p>
 
-        {/* Tips Grid */}
         <div className="flex flex-col items-center gap-10">
-          {displayedTips.map((tip, index) => (
+          {tips.map((tip, index) => (
             <div
               key={tip.id}
               data-aos={
@@ -64,7 +46,6 @@ const WinterCareTips = () => {
               }
               className="bg-white shadow-2xl rounded-3xl overflow-hidden transition-transform duration-500 transform hover:scale-105 w-full max-w-7xl flex flex-col md:flex-row"
             >
-              {/* Image */}
               <div className="relative w-full md:w-1/3 h-64">
                 <img
                   src={tip.image}
@@ -76,7 +57,6 @@ const WinterCareTips = () => {
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-8 flex flex-col justify-between flex-1">
                 <div>
                   <div className="flex items-center gap-2 mb-3 text-[#FF6B6B] font-semibold text-lg">
@@ -94,21 +74,9 @@ const WinterCareTips = () => {
             </div>
           ))}
         </div>
-
-        {/* More Tips Button */}
-        {tips.length > 4 && (
-          <div className="flex justify-center mt-10" data-aos="zoom-in">
-            <button
-              onClick={() => navigate('/tips')}
-              className="px-14 py-3 bg-[#FF6B6B] text-white rounded-full font-semibold hover:bg-[#ff5252] transition transform hover:scale-105"
-            >
-              More Tips
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );
 };
 
-export default WinterCareTips;
+export default AllWinterCareTips;

@@ -12,7 +12,7 @@ const AuthLayout = () => {
       </header>
 
       {/* Page Content */}
-      <main className="flex-grow w-full">
+      <main className="pt-20 flex-grow w-full">
         <Outlet />
       </main>
 

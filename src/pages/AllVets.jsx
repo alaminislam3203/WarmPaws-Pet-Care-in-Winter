@@ -13,7 +13,7 @@ import { MdEmail } from 'react-icons/md';
 import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
-const ExpertVets = () => {
+const AllVets = () => {
   const [doctors, setDoctors] = useState([]);
   const [selectedDoctor, setSelectedDoctor] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,8 +26,6 @@ const ExpertVets = () => {
       .then(data => setDoctors(data))
       .catch(err => console.error('Failed to load doctors:', err));
   }, []);
-
-  const displayedDoctors = doctors.slice(0, 3); // sudhu 3 jon vet
 
   const renderStars = rating => {
     const stars = [];
@@ -78,16 +76,17 @@ const ExpertVets = () => {
     <section className="bg-[#F9FAFB] py-10 sm:py-14 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.h2
-          className="text-3xl sm:text-5xl font-extrabold text-center text-gray-800 mb-6 sm:mb-12 tracking-wide"
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, type: 'spring' }}
+          className="text-2xl sm:text-4xl font-bold text-center text-gray-800 mb-6 sm:mb-10"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.8 }}
         >
-          Meet Our <span className="text-[#FF6B6B]">Expert Vets</span>
+          All Expert Vets
         </motion.h2>
 
         <div className="flex flex-col gap-8 sm:gap-12">
-          {displayedDoctors.map((doctor, index) => {
+          {doctors.map((doctor, index) => {
             const sentences = doctor.description.split('. ').filter(Boolean);
             return (
               <motion.div
@@ -176,18 +175,6 @@ const ExpertVets = () => {
             );
           })}
         </div>
-
-        {/* More Expert Vets Button */}
-        {doctors.length > 3 && (
-          <div className="flex justify-center mt-6 sm:mt-8">
-            <button
-              onClick={() => navigate('/vets')}
-              className="px-4 py-2 sm:px-6 sm:py-3 bg-[#FF6B6B] text-white rounded-full font-semibold hover:bg-[#ff5252] transition text-sm sm:text-base"
-            >
-              More Expert Vets
-            </button>
-          </div>
-        )}
       </div>
 
       {/* Modal */}
@@ -261,4 +248,4 @@ const ExpertVets = () => {
   );
 };
 
-export default ExpertVets;
+export default AllVets;

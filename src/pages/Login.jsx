@@ -4,7 +4,6 @@ import { AuthContext } from '../provider/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import toast from 'react-hot-toast';
-import authBg from '../assets/auth-bg.jpg';
 
 const Login = () => {
   const [emailInput, setEmailInput] = useState('');
@@ -33,7 +32,7 @@ const Login = () => {
   const handleGoogleLogin = () => {
     googleSignIn()
       .then(() => {
-        toast.success(' Logged in with Google!');
+        toast.success('Logged in with Google!');
         navigate(from);
       })
       .catch(err => {
@@ -42,22 +41,19 @@ const Login = () => {
   };
 
   return (
-    <div
-      className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${authBg})` }}
-    >
-      <div className="card bg-base-100 w-full max-w-sm shadow-2xl py-5">
+    <div className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-gray-100 px-4">
+      <div className="card bg-white w-full max-w-sm shadow-2xl py-5 px-5 rounded-xl">
         <h2 className="font-semibold text-2xl text-center mb-4">
           Login to your account
         </h2>
 
-        <form onSubmit={handleLogin} className="card-body">
+        <form onSubmit={handleLogin} className="card-body px-0">
           {/* Email Field */}
           <label className="label">Email</label>
           <input
             name="email"
             type="email"
-            className="input"
+            className="input input-bordered w-full"
             placeholder="Email"
             required
             value={emailInput}
@@ -65,12 +61,12 @@ const Login = () => {
           />
 
           {/* Password Field with Eye Toggle */}
-          <label className="label">Password</label>
+          <label className="label mt-3">Password</label>
           <div className="relative">
             <input
               name="password"
               type={showPassword ? 'text' : 'password'}
-              className="input w-full pr-10"
+              className="input input-bordered w-full pr-10"
               placeholder="Password"
               required
             />
@@ -83,7 +79,7 @@ const Login = () => {
             </button>
           </div>
 
-          <div className="flex justify-start mb-2">
+          <div className="flex justify-start mb-2 mt-1">
             <Link
               to="/auth/forgot-password"
               state={{ email: emailInput }}
@@ -114,7 +110,7 @@ const Login = () => {
           <button
             type="button"
             onClick={handleGoogleLogin}
-            className="flex items-center justify-center gap-2 w-full border border-base rounded-lg py-2 text-gray-700 hover:bg-gray-100 transition duration-300"
+            className="flex items-center justify-center gap-2 w-full border border-gray-300 rounded-lg py-2 text-gray-700 hover:bg-gray-100 transition duration-300"
           >
             <FcGoogle size={24} />
             <span className="font-medium">Login with Google</span>
@@ -122,7 +118,7 @@ const Login = () => {
 
           <p className="font-semibold text-center pt-5 text-sm">
             Don't have an account?{' '}
-            <Link className="text-secondary" to="/auth/signup">
+            <Link className="text-blue-600 hover:underline" to="/auth/signup">
               Sign Up
             </Link>
           </p>

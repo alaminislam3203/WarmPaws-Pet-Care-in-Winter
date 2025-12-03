@@ -2,10 +2,10 @@ import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Services from '../pages/Services';
 import WinterCareTips from '../pages/WinterCareTips';
 import ExpertVets from '../pages/ExpertVets';
 import ProductsSection from '../components/ProductsSection';
+import PopularServices from '../pages/PopularServices';
 
 const HomeLayout = () => {
   const location = useLocation();
@@ -14,19 +14,20 @@ const HomeLayout = () => {
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       {/* Navbar */}
-      <header className="w-full">
+
+      <header className="pt-24 bg-gray-50">
         <Navbar />
       </header>
 
       {/* Main Content */}
-      <main className="flex-grow w-full">
+      <main className="flex-grow w-full bg-gray-50">
         <Outlet />
 
         {isHome && (
           <>
             {/* Services Section */}
             <section className="w-full">
-              <Services />
+              <PopularServices />
             </section>
 
             {/* Winter Care Tips Section */}
