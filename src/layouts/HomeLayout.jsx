@@ -6,6 +6,7 @@ import WinterCareTips from '../pages/WinterCareTips';
 import ExpertVets from '../pages/ExpertVets';
 import ProductsSection from '../components/ProductsSection';
 import PopularServices from '../pages/PopularServices';
+import ScrollToTop from '../components/ScrollToTop';
 
 const HomeLayout = () => {
   const location = useLocation();
@@ -14,6 +15,7 @@ const HomeLayout = () => {
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       {/* Navbar */}
+      <ScrollToTop />
 
       <header className="pt-24 bg-gray-50">
         <Navbar />
