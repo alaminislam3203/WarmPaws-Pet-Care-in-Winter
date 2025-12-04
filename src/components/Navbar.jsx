@@ -103,7 +103,7 @@ const Navbar = () => {
           }`
         }
       >
-        <MdInfo className="text-lg" /> About Us
+        <MdInfo className="text-lg" /> About
       </NavLink>
 
       <NavLink
