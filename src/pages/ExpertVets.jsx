@@ -27,7 +27,7 @@ const ExpertVets = () => {
       .catch(err => console.error('Failed to load doctors:', err));
   }, []);
 
-  const displayedDoctors = doctors.slice(0, 3); // sudhu 3 jon vet
+  const displayedDoctors = doctors.slice(0, 3);
 
   const renderStars = rating => {
     const stars = [];

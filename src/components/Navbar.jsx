@@ -3,7 +3,6 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
 import userIcon from '../assets/user.png';
-import LogoIcon from '../assets/LogoIcon.png';
 
 import { HiMenu, HiX } from 'react-icons/hi';
 import { ImProfile } from 'react-icons/im';
@@ -23,7 +22,6 @@ import {
 } from 'react-icons/md';
 
 import toast from 'react-hot-toast';
-import { FcPrivacy } from 'react-icons/fc';
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -91,7 +89,8 @@ const Navbar = () => {
           }`
         }
       >
-        <MdHomeRepairService className="text-lg" /> All Services
+        <MdHomeRepairService className="text-lg" />
+        Services
       </NavLink>
 
       <NavLink
@@ -188,7 +187,7 @@ const Navbar = () => {
                   <Link
                     to="/profile"
                     onClick={() => setShowDropdown(false)}
-                    className="px-12 py-3 hover:bg-gray-100 text-gray-800 flex items-center gap-2 border-b"
+                    className="px-12 py-3 hover:bg-yellow-200 text-gray-800 flex text-center items-center gap-2 border-b"
                   >
                     <ImProfile /> Profile
                   </Link>

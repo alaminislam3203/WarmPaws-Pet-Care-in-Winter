@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaUserAlt, FaImage, FaSave } from 'react-icons/fa';
 import userIcon from '../assets/user.png';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function EditProfile() {
   const [name, setName] = useState('');
@@ -38,11 +39,15 @@ export default function EditProfile() {
     // Trigger storage event manually (for live updates in same tab)
     window.dispatchEvent(new Event('storage'));
 
-    alert('Profile updated successfully!');
+    // Show toast notification
+    toast.success('Profile updated successfully!', {
+      position: 'top-center',
+    });
   };
 
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-start py-12 px-4">
+      <Toaster position="top-center" />
       <div className="w-full max-w-md bg-white shadow-xl rounded-xl p-7">
         <h2 className="text-3xl font-bold text-center mb-8 flex items-center justify-center gap-2">
           <FaUserAlt className="text-[#0A183B]" />
